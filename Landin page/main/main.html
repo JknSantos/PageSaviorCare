@@ -10,40 +10,64 @@
 </head>
 <body>
     <!-- Parte de cima -->
-    <nav class="nav">
+    <nav role="navegation" class="nav">
         <div class="nav-logo">
-            <img src="../../SpenseLandingPage/Assets/Ellipse.png" alt="logo-bottom">
-            <img src="../../SpenseLandingPage/Assets/logo.png" alt="logo-top">
+            <div class="nav-logo-back">
+                <div class="nav-logo-front">
+                    <img src="../../SpenseLandingPage/Assets/logo.png" alt="logo-top">
+                </div>
+            </div>
             <p>Saviour Care</p>
         </div>
         <div class="nav-list">
-            <a href="#">
-                <p>Home</p>
-            </a>
-            <a href="#">
-                <p>Find a doctor</p>
-            </a>
-            <a href="#">
-                <p>Apps</p>
-            </a>
-            <a href="#">
-                <p>Testimonials</p>
-            </a>
-            <a href="#">
-                <p>About us</p>
-            </a>
+            <div class="nav-home">
+                <a href="#home" class="list">
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="nav-services">
+                <a href="#services" class="list">
+                    <p>Services</p>
+                </a>
+            </div>
+            <div class="nav-providers">
+                <a href="#providers" class="list">
+                    <p>Providers</p>
+                </a>
+            </div>
+            <div class="nav-apps">
+                <a href="#apps" class="list">
+                    <p>Apps</p>
+                </a>
+            </div>
+            <div class="nav-doctor">
+                <a href="#doctor" class="list">
+                    <p>Find a doctor</p>
+                </a>
+            </div>
+            <div class="nav-testimonials">
+                <a href="#testimonials" class="list">
+                    <p>Testimonials</p>
+                </a>
+            </div>
+            <div class="nav-about">
+                <a href="#about" class="list">
+                    <p>About us</p>
+                </a>
+            </div>
         </div>
     </nav>
     <!-- Main -->
     <main class="main">
         <!-- Top -->
+        <div id="home" class="margin"></div>
         <section class="main-top">
             <div class="main-top-left">
                 <div class="main-top-left-title">
                     <h1>Virtual healthcare Saviour for you</h1>
                 </div>
-                <div class="main-top-left-para">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem reprehenderit sint distinctio tempora sed est quaerat dolores deserunt architecto officiis voluptatum neque unde laboriosam impedit error, temporibus molestias aut nobis!</p>
+                <div class="main-top-left-info">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
                 </div>
                 <div class="main-top-left-btn">
                     <input type="button" value="Consult Today">
@@ -61,7 +85,7 @@
             <!-- Top -->
             <div class="main-middle-top">
                 <div class="main-middle-title">
-                    <h2>Services we Offer</h2>
+                    <h2 id="services">Services we Offer</h2>
                 </div>
                 <div class="main-middle-top-txt">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod asperiores praesentium error fugit iusto. Fugit consequuntur illum facilis ex dignissimos cum autem veritatis quia unde totam. Vitae iusto velit debitis?</p>
@@ -150,7 +174,7 @@
                 </div>
                 <div class="main-bottom-info">
                     <div class="main-bottom-info-title">
-                        <h2>Leading healthcare providers</h2>
+                        <h2 id="providers">Leading healthcare providers</h2>
                     </div>
                     <div class="main-bottom-info-desc">
                         <p>Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To use, it's not just work. We take pride in the solutions we deliver</p>
@@ -166,7 +190,7 @@
                 </div>
                 <div class="main-bottom-info">
                     <div class="main-bottom-info-title">
-                        <h2>Download our Saviour Care mobile app</h2>
+                        <h2 id="apps">Download our Saviour Care mobile app</h2>
                     </div>
                     <div class="main-bottom-info-desc">
                         <p>Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely</p>
@@ -182,7 +206,7 @@
                 </div>
                 <div class="main-bottom-info">
                     <div class="main-bottom-info-title">
-                        <h2>Find a Doctor near you</h2>
+                        <h2 id="doctor">Find a Doctor near you</h2>
                     </div>
                     <div class="main-bottom-info-desc">
                         <p>Our  app and web portal allows you to find the doctor to your nearest location. </p>
@@ -197,7 +221,7 @@
         <!-- Bottom carrousel-->
         <section class="carousel">
             <!-- Carosel 1 -->
-            <div class="carousel-body carousel1">
+            <div id="testimonials" class="carousel-body carousel1">
                 <div class="carousel-title">
                     <h2>What our customers are saying</h2>
                 </div>
@@ -233,7 +257,7 @@
             </div>
         </section>
     </main>
-
+    <div id="about" class="margin"></div> <!-- testar depois -->
     <footer class="footer">
         <div class="footer-left">
             <div class="footer-left-img">
