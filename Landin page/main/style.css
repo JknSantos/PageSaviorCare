@@ -93,24 +93,27 @@
 .main-top-left {
     width: 45%;
     padding-left: 7%;
+    padding-top: 5%;
 }
 
 .main-top-left-title {
     font-family: Mulish;
-    font-size: 25pt;
-    line-height: 42pt;
+    font-size: 2.1em;
+    line-height: 1.6em;
     color: rgba(60, 86, 123, 1);
+    text-align: center;
 }
 
 .main-top-left-info {
     font-family: Roboto;
-    font-size: 12pt;
-    line-height: 16pt;
+    font-size: 1em;
+    line-height: 1.3em;
     color: rgba(147, 193, 249, 1);
+    text-align: center;
 
     width: 80%;
-    padding-top: 60px;
-    padding-left: 3%;
+    padding-top: 10%;
+    margin: 0 auto;
 }
 
 .main-top-left-info p {
@@ -119,9 +122,11 @@
 }
 
 .main-top-left-btn {
+    display: flex;
+    justify-content: center;
+    
     height: 100%;
-    padding-top: 15%;
-    padding-left: 5%;
+    padding-top: 10%;
 }
 
 .main-top-left-btn input {
@@ -151,5 +156,4 @@
 .main-top-right-img img {
     display: block;
     margin: 0 auto;
-    width: 75%;
 }
