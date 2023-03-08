@@ -11,11 +11,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* scroll-behavior: smooth; */
 }
 
 .margin {
     display: block;
-    padding-bottom: 5%; /* DIVISOR */
+    padding-bottom: 6%; /* DIVISOR */
 }
 
 /* MENU NAV */
@@ -175,6 +176,8 @@
     font-family: Mulish;
     font-size: 1.7em;
     color: rgb(30, 30, 30);
+
+    padding-top: 2%;
 }
 
 .divider {
@@ -330,5 +333,160 @@
 /* BOTTOM CARROSEL */
 .carrossel-body {
     background: linear-gradient(208.18deg, #6888C8 9.05%, #5A98F2 76.74%);
+    border-radius: 15px;
+    margin: 0 20%;
+}
+
+.carrossel-title {
+    font-family: Mulish;
+    color: white;
+    text-align: center;
+    padding: 3% 0;
+}
+
+.divisor {
+    display: block;
+    margin: 0 auto;
+
+
+    width: 60px;
+    height: 2px;
+
+    background-color: white;
+}
+
+.carrossel-info {
+    display: flex;
+
+    font-family: Roboto;
+    color: white;
+
+    padding: 5% 0 5% 0;
+}
+
+.carrossel-info-left {
+    width: 50%;
+}
+
+.corrossel-info-left-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    text-align: center;
+}
+
+.carrossel-info-left-name {
+    padding-top: 2%;
+}
+
+.carrossel-info-right {
+    width: 50%;
+}
+
+.carrossel-info-right-group {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+
+    text-align: justify;
+    text-indent: 1ch;
+    line-height: 2em;
+}
+
+/* BOTÕES DO CARROSSEL */
+.carrossel-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 2%;
+}
+
+.carrossel-bottom-arrow-left {
+    cursor: pointer;
+}
+
+.carrossel-bottom-arrow-right {
+    cursor: pointer;
+}
+
+.carrossel-bottom-selector img {
+    padding: 0 8px;
+}
+
+.carrossel-arrow-to-top {
+    display: flex;
+    justify-content: end;
+
+    padding-top: 2%;
     margin: 0 15%;
+
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer-bg {
+    background: linear-gradient(208.18deg, #6888C8 9.05%, #5A98F2 76.74%);
+}
+
+.footer {
+    display: flex;
+    margin: 0 15%;
+    padding: 5% 0 5% 0;
+    gap: 100px;
+}
+
+.footer-left {
+    width: 50%;
+}
+
+.footer-left-title {
+    font-size: 1.3em;
+}
+
+.footer-left-logo-back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    font-family: Mulish;
+    color: white;
+
+    padding-bottom: 5%;
+}
+
+.footer-left-logo-front img {
+    width: 35px;
+}
+
+.footer-left-info {
+    color: white;
+    font-family: Roboto;
+    text-align: justify;
+    text-indent: 1ch;
+
+    padding-bottom: 5%;
+}
+
+.footer-right {
+    display: flex;
+    width: 50%;
+    gap: 100px;
+
+    font-family: Mulish;
+    font-weight: 300;
+    color: white;
+}
+
+.footer-right-info h3 {
+    padding-bottom: 30px;
+}
+
+.footer-right-info p {
+    padding-bottom: 10px;
+}
+
+.footer-right-info a {
+    text-decoration: none;
+    color: white;
 }
