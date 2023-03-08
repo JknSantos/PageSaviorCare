@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
 .margin {
@@ -79,6 +79,18 @@
     font-family: Mulish;
     opacity: 50%;
     color: rgba(31, 21, 52, 1);
+    text-decoration: none;
+}
+
+.nav-home a {
+    color: rgba(46, 78, 146, 1);
+    opacity: 100%;
+
+    font-weight: 700;
+
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 100%;
 }
 
 /* MAIN */
