@@ -31,7 +31,7 @@
 
     background-color: white;
 
-    padding: 30px 10%;
+    padding: 20px 10%;
 }
 
 .nav-logo {
@@ -71,26 +71,39 @@
 .nav-list {
     display: flex;
     align-items: center;
-    gap: 20px;
 
 }
 
 .list {
+    position: relative;
     font-family: Mulish;
-    opacity: 50%;
-    color: rgba(31, 21, 52, 1);
+    color: rgba(31, 21, 52, 0.5);
     text-decoration: none;
+    font-weight: 700;
+    padding: 25px 15px;
 }
 
-.nav-home a {
+.list::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(46, 78, 146, 1);
+    height: 3px;
+    width: 0px;
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.list:hover::after {
+    width: 100%;
+    right: 0%;
+    left: 0%;
+}
+
+.nav-list a:hover {
     color: rgba(46, 78, 146, 1);
     opacity: 100%;
-
-    font-weight: 700;
-
-    text-decoration-line: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 100%;
 }
 
 /* MAIN */
