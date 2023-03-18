@@ -222,8 +222,9 @@ a.selected::after{
 
 .main-middle-top-txt {
     margin: 0 auto;
-    width: 900px;
+    padding: 40px;
 
+    font-size: 1em;
     font-family: Roboto;
     font-weight: 500;
     color: rgb(50, 50, 50);
