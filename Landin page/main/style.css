@@ -32,6 +32,8 @@
     background-color: white;
 
     padding: 20px 10%;
+
+    z-index: 1;
 }
 
 .nav-logo {
@@ -367,10 +369,23 @@ a.selected::after{
 }
 
 /* BOTTOM CARROSEL */
-.carrossel-body {
-    background: linear-gradient(208.18deg, #6888C8 9.05%, #5A98F2 76.74%);
+.carrossel{
+    width: 854px;
+    height: 433.94px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
     border-radius: 15px;
-    margin: 0 20%;
+}
+.container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+.carrossel-body {
+    width: 854px;
+    object-fit: cover;
+    background: linear-gradient(208.18deg, #6888C8 9.05%, #5A98F2 76.74%);
 }
 
 .carrossel-title {

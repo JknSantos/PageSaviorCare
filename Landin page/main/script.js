@@ -70,3 +70,20 @@ window.addEventListener('scroll', function() {
         
   }
 });
+
+/* CHAMANDO OS CARROSSEIS */
+const carrosseis = document.getElementById("carrosseis");
+const carrossel = document.querySelectorAll(".carrossel-body")
+
+/* FUNÇÃO PARA PASSAR OS CARDS DO CARROSSEL */
+let idx = 0;
+
+function startCarrossel(){
+  idx++;
+  if(idx > carrossel.length - 1){
+    idx = 0;
+  }
+  carrosseis.style.transform = `translateX(${-idx * 854}px)`;
+  console.log(carrossel.length)
+}
+setInterval(startCarrossel,3800);
