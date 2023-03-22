@@ -4,6 +4,10 @@ $('a').on('click', function(){
     $(this).addClass('selected');
 
 });
+
+/* MOIBILE MENU */
+
+
 //MOSTRANDO O SCROLL DAS NAVS //
 /* window.addEventListener('scroll', function() {
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
