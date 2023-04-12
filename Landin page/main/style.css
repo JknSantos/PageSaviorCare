@@ -16,7 +16,7 @@
 
 .margin {
     display: block;
-    padding-bottom: 6%; /* DIVISOR */
+    padding-bottom: 80px; /* DIVISOR */
 }
 
 /* MENU MOBILE */
@@ -405,23 +405,22 @@ a.selected::after{
 
 /* BOTTOM CARROSEL */
 .carrossel{
-    width: 854px;
-    height: 433.94px;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    border-radius: 15px;
+    width: 100%;
 }
 .container{
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(0);
+    justify-content: center;
+    align-items: center;
+    padding: 0 13%;
+    width: 100%;
 }
 .carrossel-body {
     display: none;
-    width: 854px;
+    max-width: 854px;
+    margin: 0 auto;
     object-fit: cover;
     background: linear-gradient(208.18deg, #6888C8 9.05%, #5A98F2 76.74%);
+    border-radius: 15px;
 }
 .carrossel-body--visible{
     display: block;
@@ -487,8 +486,8 @@ a.selected::after{
 .carrossel-bottom {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    padding-top: 2%;
+    gap: 40px;
+    padding: 2% 10%;
 }
 
 .carrossel-bottom-arrow-left {
@@ -681,13 +680,22 @@ a.selected::after{
     .carrossel-body {
         margin: 0 7%;
     }
+    /* TESTIMONIALS */
+    .carrossel-info {
+    flex-direction: column;
+    }
+    
+    .carrossel-info-left {
+    width: 100%;
+    padding: 3% 3%;
+    }
+    
+    .carrossel-info-right {
+    width: 100%;
+    }
 }
 
 @media screen and (max-width: 550px) {
-        /* GERAL */
-    .margin {
-        padding-bottom: 12%;
-    }
 
         /* MAIN TOP */
     .main-top-left-title {
@@ -698,7 +706,7 @@ a.selected::after{
     .main-middle-title {
         font-size: 1.3em;
     }
-
+    
     .main-middle-top-txt {
         font-size: 0.9em;
         padding: 20px;
@@ -708,19 +716,6 @@ a.selected::after{
         grid-template-columns: repeat(1, 1fr);
     }
 
-        /* TESTIMONIALS */
-    .carrossel-info {
-        flex-direction: column;
-    }
-
-    .carrossel-info-left {
-        width: 100%;
-        padding: 3% 3%;
-    }
-
-    .carrossel-info-right {
-        width: 100%;
-    }
 
         /* FOOTER */
     .footer {
