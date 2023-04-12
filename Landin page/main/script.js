@@ -76,18 +76,40 @@ window.addEventListener('scroll', function() {
 });
 
 /* CHAMANDO OS CARROSSEIS */
-const carrosseis = document.getElementById("carrosseis");
-const carrossel = document.querySelectorAll(".carrossel-body")
-
+const slides = document.querySelectorAll(".carrossel-body")
+const slideButtons = document.querySelectorAll(".carrossel-btn")
+const nextButton = document.querySelector('[class="carrossel-bottom-arrow-right"]')
+const prevButton = document.querySelector('[class="carrossel-bottom-arrow-left"]')
+//CONTADOR DOS CARROSSEIS
+let currentSlideIndex = 0
 /* FUNÇÃO PARA PASSAR OS CARDS DO CARROSSEL */
-let idx = 0;
-
-function startCarrossel(){
-  idx++;
-  if(idx > carrossel.length - 1){
-    idx = 0;
+nextButton.addEventListener('click', () =>{
+  if(currentSlideIndex === slides.length - 1){
+    currentSlideIndex = 0
+  }else{
+    currentSlideIndex++
   }
-  carrosseis.style.transform = `translateX(${-idx * 854}px)`;
-  console.log(carrossel.length)
-}
-setInterval(startCarrossel,3800);
+  slides.forEach(slide => {
+    slide.classList.remove('carrossel-body--visible')
+  })
+  slideButtons.forEach(button => {
+    button.classList.remove('carrossel-btn--selected')
+  })
+  slides[currentSlideIndex].classList.add('carrossel-body--visible')
+  slideButtons[currentSlideIndex].classList.add('carrossel-btn--selected')
+})
+prevButton.addEventListener('click', () =>{
+  if(currentSlideIndex === 0){
+    currentSlideIndex = slides.length - 1
+  }else{
+    currentSlideIndex--
+  }
+  slides.forEach(slide => {
+    slide.classList.remove('carrossel-body--visible')
+  })
+  slideButtons.forEach(button => {
+    button.classList.remove('carrossel-btn--selected')
+  })
+  slides[currentSlideIndex].classList.add('carrossel-body--visible')
+  slideButtons[currentSlideIndex].classList.add('carrossel-btn--selected')
+})
