@@ -140,7 +140,6 @@
 a.selected::after{
     content: "";
     position: absolute;
-    background-color: rgba(46, 78, 146, 1);
     height: 3px;
     width: 100%;
     right: 0%;
