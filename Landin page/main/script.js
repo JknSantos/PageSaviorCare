@@ -7,72 +7,75 @@ $('a').on('click', function(){
 
 /* MOIBILE MENU */
 
-
-//MOSTRANDO O SCROLL DAS NAVS //
-/* window.addEventListener('scroll', function() {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    console.log(scrollTop);
-}); */
-
 //FUNÇÃO PARA ATIVAR ESTILO AO USAR O SCROLL
 
 window.addEventListener('scroll', function() {
-  var homeScroll = document.querySelector('.nav-home > a');
-  var servicesScroll = document.querySelector('.nav-services > a');
-  var providersScroll = document.querySelector('.nav-providers > a');
-  var appsScroll = document.querySelector('.nav-apps > a');
-  var doctorScroll = document.querySelector('.nav-doctor > a');
-  var testimonialsScroll = document.querySelector('.nav-testimonials > a');
-  var aboutScroll = document.querySelector('.nav-about > a');
-  if (window.scrollY >= 0 && window.scrollY < 710) {
+  const homeScroll = document.querySelector('.nav-home > a');
+  const servicesScroll = document.querySelector('.nav-services > a');
+  const providersScroll = document.querySelector('.nav-providers > a');
+  const appsScroll = document.querySelector('.nav-apps > a');
+  const doctorScroll = document.querySelector('.nav-doctor > a');
+  const testimonialsScroll = document.querySelector('.nav-testimonials > a');
+  const aboutScroll = document.querySelector('.nav-about > a');
+
+  const homeDivisor = document.querySelector('#home').offsetTop;
+  const servicesDivisor = document.querySelector('#services').offsetTop;
+  const providersDivisor = document.querySelector('#providers').offsetTop;
+  const appsDivisor = document.querySelector('#apps').offsetTop;
+  const doctorDivisor = this.document.querySelector('#doctor').offsetTop;
+  const testimonialsDivisor = document.querySelector('#testimonials').offsetTop;
+  const aboutDivisor = document.querySelector('#about').offsetTop;
+
+  if (window.scrollY >= 0 && window.scrollY < servicesDivisor) {
     homeScroll.classList.add('selected');
   }
   else{
       homeScroll.classList.remove('selected');
       
   }
-  if (window.scrollY >= 710 && window.scrollY < 1710) {
+  if (window.scrollY >= servicesDivisor && window.scrollY < providersDivisor) {
       servicesScroll.classList.add('selected');
   }
   else{
       servicesScroll.classList.remove('selected');
         
   }
-  if (window.scrollY >= 1710 && window.scrollY < 2290) {
+  if (window.scrollY >= providersDivisor && window.scrollY < appsDivisor) {
       providersScroll.classList.add('selected');
     }
   else{
       providersScroll.classList.remove('selected');
         
   }
-  if (window.scrollY >= 2290 && window.scrollY < 2843) {
+  if (window.scrollY >= appsDivisor && window.scrollY < doctorDivisor) {
     appsScroll.classList.add('selected');
     }
   else{
     appsScroll.classList.remove('selected');
         
   }
-  if (window.scrollY >= 2843 && window.scrollY < 3406) {
+  if (window.scrollY >= doctorDivisor && window.scrollY < testimonialsDivisor) {
     doctorScroll.classList.add('selected');
     }
   else{
     doctorScroll.classList.remove('selected');
         
   }
-  if (window.scrollY >= 3406 && window.scrollY < 3601) {
+  if (window.scrollY >= testimonialsDivisor && window.scrollY < aboutDivisor) {
     testimonialsScroll.classList.add('selected');
     }
   else{
     testimonialsScroll.classList.remove('selected');
         
   }
-  if (window.scrollY >= 3601) {
+  if (window.scrollY >= aboutDivisor - 365) {
     aboutScroll.classList.add('selected');
     }
   else{
     aboutScroll.classList.remove('selected');
         
   }
+  console.log(aboutDivisor)
 });
 
 /* CHAMANDO OS CARROSSEIS */
