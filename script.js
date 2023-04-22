@@ -1,18 +1,27 @@
 //ADICIONANDO O ESTILO NAS ANCORAS //
-$('a').on('click', function(){
-  $('a').removeClass('selected');
-  $(this).addClass('selected');
-
-});
+const elementosNav = document.querySelectorAll('.list');
+function ativarClick(){
+  elementosNav.forEach((elemento) => {
+    elemento.addEventListener('click', () => {
+      // Remove a classe de todos os elementos do grupo
+      elementosNav.forEach((e) => {
+        e.classList.remove('selected');
+      });
+  
+      // Adiciona a classe apenas no elemento clicado
+      elemento.classList.add('selected');
+    });
+  });
+}
 
 /* MOIBILE MENU */
 
 
 //MOSTRANDO O SCROLL DAS NAVS //
-/* window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() {
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   console.log(scrollTop);
-}); */
+}); 
 
 //FUNÇÃO PARA ATIVAR ESTILO AO USAR O SCROLL
 
@@ -34,49 +43,72 @@ const testimonialsDivisor = document.querySelector('#testimonials').offsetTop;
 const aboutDivisor = document.querySelector('#about').offsetTop;
 
 
-if (window.scrollY >= 0 && window.scrollY < servicesDivisor) {
+console.log(servicesDivisor)
+if (window.scrollY >= 0 && window.scrollY < servicesDivisor  - 1) {
+  elementosNav.forEach((e) => {
+    e.classList.remove('selected');
+  });
   homeScroll.classList.add('selected');
 }
 else{
     homeScroll.classList.remove('selected');
     
 }
-if (window.scrollY >= servicesDivisor && window.scrollY < providersDivisor) {
-    servicesScroll.classList.add('selected');
+
+if (window.scrollY >= servicesDivisor && window.scrollY < providersDivisor  - 1) {
+  elementosNav.forEach((e) => {
+    e.classList.remove('selected');
+  });  
+  servicesScroll.classList.add('selected');
 }
 else{
     servicesScroll.classList.remove('selected');
       
 }
-if (window.scrollY >= providersDivisor && window.scrollY < appsDivisor) {
-    providersScroll.classList.add('selected');
+if (window.scrollY >= providersDivisor && window.scrollY < appsDivisor  - 1) {
+  elementosNav.forEach((e) => {
+    e.classList.remove('selected');
+  });  
+  providersScroll.classList.add('selected');
   }
 else{
     providersScroll.classList.remove('selected');
       
 }
-if (window.scrollY >= appsDivisor && window.scrollY < doctorDivisor) {
+if (window.scrollY >= appsDivisor && window.scrollY < doctorDivisor  - 1) {
+  elementosNav.forEach((e) => {
+    e.classList.remove('selected');
+  });
   appsScroll.classList.add('selected');
   }
 else{
   appsScroll.classList.remove('selected');
       
 }
-if (window.scrollY >= doctorDivisor && window.scrollY < testimonialsDivisor) {
+if (window.scrollY >= doctorDivisor && window.scrollY < testimonialsDivisor  - 1) {
+  elementosNav.forEach((e) => {
+    e.classList.remove('selected');
+  });
   doctorScroll.classList.add('selected');
   }
 else{
   doctorScroll.classList.remove('selected');
       
 }
-if (window.scrollY >= testimonialsDivisor && window.scrollY < aboutDivisor) {
+if (window.scrollY >= testimonialsDivisor && window.scrollY < aboutDivisor  - 195) {
+  elementosNav.forEach((e) => {
+    e.classList.remove('selected');
+  });
   testimonialsScroll.classList.add('selected');
   }
 else{
   testimonialsScroll.classList.remove('selected');
       
 }
-if (window.scrollY >= aboutDivisor) {
+if (window.scrollY >= aboutDivisor - 195) {
+  elementosNav.forEach((e) => {
+    e.classList.remove('selected');
+  });
   aboutScroll.classList.add('selected');
   }
 else{
@@ -84,7 +116,6 @@ else{
       
 }
 });
-
 /* CHAMANDO OS CARROSSEIS */
 const slides = document.querySelectorAll(".carrossel-body")
 const slideButtons = document.querySelectorAll(".carrossel-btn")
